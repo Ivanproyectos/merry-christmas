@@ -1,0 +1,25 @@
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+
+}
+.options{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+}
+
+.options + .options{
+    margin-left: 1rem;
+}
