@@ -1,9 +1,9 @@
 import styles from "./Countdown.module.css";
 import { useCounter } from "../hooks/useCounter";
+import { BiShare } from "react-icons/bi";
 
 export const Countdown = () => {
   const { days, hours, minutes, seconds } = useCounter();
-  console.log(styles)
   return (
     <div className={`card ${styles.container}`}>
       <h2>¡Ya estamos cerca! 🎄🧑‍🎄</h2>
@@ -25,6 +25,10 @@ export const Countdown = () => {
           <small>Segundos</small>
         </div>
       </div>
+      <div className={styles.shareContainer}>
+          <button className={styles.shareButton}> <BiShare /> Compartir</button>
+      </div>
+
     </div>
   );
 };
