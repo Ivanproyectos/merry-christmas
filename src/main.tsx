@@ -4,7 +4,5 @@ import './assets/styles/global.css'
 import { Home } from './pages/home/Home'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
     <Home />
-  </StrictMode>,
 )

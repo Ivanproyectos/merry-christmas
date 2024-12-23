@@ -1,9 +1,11 @@
 import styles from "./Header.module.css";
 import { BiShare, BiUser } from "react-icons/bi";
-import { WhatsappShareButton, FacebookShareButton } from 'react-share'
+import { Modal } from "../../features/modal/components/Modal";
+import { SharePage } from "../../features/sharePage/components/SharePage";
+import { useModal } from "../../features/modal/hooks/useModal";
 
 export const Header = () => {
-  const pageUrl = 'https://merry-christmas-ashen.vercel.app/'
+  const { isOpen, openModal, closeModal } = useModal();
 
   return (
     <>
@@ -11,13 +13,7 @@ export const Header = () => {
       <div className={styles.headerContainer}>
         <h1>🎄 Merry Christmas 🎄</h1>
         <nav>
-         {/*<WhatsappShareButton url={pageUrl} className={styles.options}>
-            <BiShare size={30} />
-          </WhatsappShareButton>
-          <FacebookShareButton url={pageUrl} className={styles.options}>
-            <BiShare size={30} />
-          </FacebookShareButton> */} 
-          <button className={styles.options}>
+          <button className={styles.options} onClick={openModal}>
             <BiShare size={30} />
           </button>
           <button className={styles.options}>
@@ -26,6 +22,9 @@ export const Header = () => {
         </nav>
       </div>
     </header>
+     <Modal title="Comparte la alegria con tus amigos" isOpen={isOpen} onClose={closeModal}>
+          <SharePage />
+        </Modal>
     </>
   );
 };
