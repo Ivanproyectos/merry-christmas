@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import { BiShare, BiUser } from "react-icons/bi";
+import { BiShare } from "react-icons/bi";
 import { Modal } from "../../features/modal/components/Modal";
 import { SharePage } from "../../features/sharePage/components/SharePage";
 import { useModal } from "../../features/modal/hooks/useModal";
@@ -16,9 +16,11 @@ export const Header = () => {
           <button className={styles.options} onClick={openModal}>
             <BiShare size={30} />
           </button>
-          <button className={styles.options}>
+        {/*
+         <button className={styles.options}>
             <BiUser size={30} />
           </button>
+         */} 
         </nav>
       </div>
     </header>
