@@ -10,23 +10,30 @@ export const SharePage = () => {
         <source src={fireworks} type="video/webm" />
       </video>
       <h4>🎄✨ ¡La cuenta regresiva para la Navidad ha comenzado! 🎁✨</h4>
-      <p>🎅 ⏳ Acompáñanos a esperar la llegada de la Navidad con una mágica cuenta regresiva. Cuando el reloj marque las <strong>12:00</strong>,
-         celebraremos con un espectáculo de fuegos artificiales virtuales.</p>
-         <p>🌟 ¡No te lo pierdas! Comparte esta página con tus amigos y familiares para que todos podamos disfrutar juntos de este momento especial. ❤️</p>
+      <p>
+        🎅 ⏳ Acompáñanos a esperar la llegada de la Navidad con una mágica
+        cuenta regresiva. Cuando el reloj marque las <strong>12:00</strong>,
+        celebraremos con un espectáculo de fuegos artificiales virtuales.
+      </p>
+      <p>
+        🌟 ¡No te lo pierdas! Comparte esta página con tus amigos y familiares
+        para que todos podamos disfrutar juntos de este momento especial. ❤️
+      </p>
       <div className={styles.shareButtons}>
         <WhatsappShareButton
+          style={{ display: "flex", alignItems: "center" }}
           url={pageUrl}
           className={`${styles.shareButton} btn btn-primary`}
         >
-          <BiLogoWhatsapp size={30} />
+          <BiLogoWhatsapp size={20} /> WhatsApp
         </WhatsappShareButton>
         <FacebookShareButton
+          style={{ display: "flex", alignItems: "center" }}
           url={pageUrl}
           className={`${styles.shareButton} btn btn-primary`}
         >
-          <BiLogoFacebook size={30} />
+          <BiLogoFacebook size={20} /> Facebook
         </FacebookShareButton>
-   
       </div>
     </div>
   );
