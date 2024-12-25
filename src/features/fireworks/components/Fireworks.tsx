@@ -40,7 +40,9 @@ export const FireworksDisplay = () => {
   return (
     <>
       <audio ref={audiref} src={audio} autoPlay loop></audio>
-      <div ref={containerRef} className={styles.fireworksContainer} />
+      <div ref={containerRef} className={styles.fireworksContainer} >
+        <h1>Feliz navidad !!</h1>
+      </div>
     </>
   );
 };
